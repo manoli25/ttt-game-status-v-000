@@ -14,3 +14,7 @@ WIN_COMBINATIONS = [
   [0,4,8], # Diagonal from top left to bottom right
   [2,4,6] # Diagonal from top right to bottom left
 ]
+
+def won?(board)
+
+end
