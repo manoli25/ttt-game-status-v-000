@@ -15,12 +15,19 @@ WIN_COMBINATIONS = [
   [2,4,6] # Diagonal from top right to bottom left
 ]
 
+# def won?(board)
+#   WIN_COMBINATIONS.each do |win_combination|
+#     win_combination.each do |space|
+#       board[space].all? { |player|  player = 'X'}
+#     # board[win_combination].all? do |player|
+#       return WIN_COMBINATIONS[win_combination]
+#     end
+#   end
+# end
 def won?(board)
-  WIN_COMBINATIONS.each do |win_combination|
-    win_combination.each do |space|
-      board[space].all? { |player|  player = 'X'}
-    # board[win_combination].all? do |player|
-      return WIN_COMBINATIONS[win_combination]
-    end
+  WIN_COMBINATIONS.detect do |combo|
+    board[combo[0]] == board[combo[1]] &&
+    board[combo[1]] == board[combo[2]] &&
+    position_taken?(board, combo[0])
   end
 end
