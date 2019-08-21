@@ -48,3 +48,4 @@ end
 def winner?(board)
   if winning_combo = won?(board) # this works because won? returns winning array
     board[winning_combo.first]
+  end
