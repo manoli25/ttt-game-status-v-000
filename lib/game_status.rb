@@ -45,7 +45,7 @@ def over?(board)
   full?(board) || won?(board) || draw?(board)
 end
 
-def winner?(board)
+def winner(board)
   if winning_combo = won?(board) # this works because won? returns winning array
     board[winning_combo.first]
   end
