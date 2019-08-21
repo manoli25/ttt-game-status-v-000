@@ -38,5 +38,5 @@ def full?(board)
 end
 
 def draw?(board)
-  board.none? {won?(board) || full?(board)}
+  board.none? {|scenario| won?(board) || full?(board)}
 end
