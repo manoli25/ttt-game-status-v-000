@@ -34,7 +34,7 @@ def won?(board)
 end
 
 def full?(board)
-  board.all? { |move| position_taken?(board, move) }
+  board.all? { |move| position_taken?(board, move[0]) }
 end
 
 
