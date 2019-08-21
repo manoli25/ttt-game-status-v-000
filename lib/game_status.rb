@@ -38,6 +38,7 @@ def full?(board)
     position_taken?(board, move)
   end
 end
+end
 
 
 
